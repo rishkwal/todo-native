@@ -1,11 +1,12 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import { AntDesign } from '@expo/vector-icons'; 
 
 export default function TodoItem({item, pressHandler}){
 
     return(
         <TouchableOpacity onPress={() => {pressHandler(item.key)}}>
-            <Text style={styles.item}>{item.text} </Text>
+            <Text style={styles.item}><AntDesign name="delete" size={24} color="black" /> {item.text}</Text>
         </TouchableOpacity>
     )
 }
